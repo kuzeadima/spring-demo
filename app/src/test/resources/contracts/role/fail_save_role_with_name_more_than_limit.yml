@@ -1,0 +1,16 @@
+request:
+  method: POST
+  url: /role
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    name: 1hxqvsk6cmcu8str8p
+response:
+  status: 400
+  headers:
+    Content-Type: application/json
+  body:
+    errors:
+      - source: name
+        details: Size must be between 2 and 10.

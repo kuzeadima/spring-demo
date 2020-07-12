@@ -1,11 +1,12 @@
 package com.thekuzea.experimental.domain.dao;
 
-import com.thekuzea.experimental.domain.model.Role;
-import org.springframework.data.repository.RepositoryDefinition;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import org.springframework.data.repository.RepositoryDefinition;
+
+import com.thekuzea.experimental.domain.model.Role;
 
 @RepositoryDefinition(domainClass = Role.class, idClass = UUID.class)
 public interface RoleRepository {

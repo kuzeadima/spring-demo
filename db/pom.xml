@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.thekuzea.experimental</groupId>
         <artifactId>experimental-app</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -65,11 +65,33 @@
                                 <phase>package</phase>
                                 <goals>
                                     <goal>migrate</goal>
+                                    <goal>info</goal>
                                 </goals>
                                 <configuration>
                                     <locations>classpath:db/migration/schema</locations>
                                 </configuration>
                             </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>migrate-main-schema-testdata</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-maven-plugin</artifactId>
+                        <configuration>
+                            <user>${datasource.user}</user>
+                            <password>${datasource.password}</password>
+                            <schemas>${datasource.schema}</schemas>
+                            <url>${datasource.url}</url>
+                            <table>${history.table}</table>
+                            <ignoreMissingMigrations>true</ignoreMissingMigrations>
+                        </configuration>
+                        <executions>
                             <execution>
                                 <id>main-schema-testdata-migration</id>
                                 <phase>package</phase>

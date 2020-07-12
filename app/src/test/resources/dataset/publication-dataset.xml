@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <T_PUBLICATION ID="6348be8d-fe9e-4096-bd9f-8f2042b748a4"
+                   PUBLISHED_BY="20d52d76-efbb-4168-a11d-8bd40abf174b"
+                   PUBLICATION_TIME="2020-04-26 11:48:54.758"
+                   TOPIC="Hieracium venosum L."
+                   BODY="Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh."/>
+
+    <T_PUBLICATION ID="5baf89c2-d772-4b6a-8915-521b8aa8ef60"
+                   PUBLISHED_BY="20d52d76-efbb-4168-a11d-8bd40abf174b"
+                   PUBLICATION_TIME="2020-03-14 17:41:34.651"
+                   TOPIC="Carex adusta Boott"
+                   BODY="Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus."/>
+
+    <T_PUBLICATION ID="a3d3fcde-1aaa-4904-9024-db20e05d51b3"
+                   PUBLISHED_BY="1895cd34-c5bc-46fb-b28c-ea47da9963a8"
+                   PUBLICATION_TIME="2020-01-29 06:27:59.398"
+                   TOPIC="Collinsia heterophylla Buist ex Graham"
+                   BODY="Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."/>
+</dataset>

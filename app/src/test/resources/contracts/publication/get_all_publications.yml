@@ -1,0 +1,25 @@
+request:
+  method: GET
+  url: /publication
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    - id: 95377ef8-3010-45a9-a5f7-296b98f314b6
+      publishedBy: Larry
+      publicationTime: '2020-04-26T11:48:54.758+02:00'
+      topic: Hieracium venosum L.
+      body: Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.
+    - id: feea949a-f2f3-44ec-b861-0bb521fd7b54
+      publishedBy: Kate
+      publicationTime: '2020-03-14T17:41:34.651+02:00'
+      topic: Carex adusta Boott
+      body: Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.
+    - id: b339b3f6-1826-4b62-9f37-742339310075
+      publishedBy: Kate
+      publicationTime: '2020-01-29T06:27:59.398+02:00'
+      topic: Collinsia heterophylla Buist ex Graham
+      body: Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <T_USER ID="20d52d76-efbb-4168-a11d-8bd40abf174b"
+            USERNAME="Larry"
+            PASSWORD="jOnYPBWMHlgEPkmxHsjpBNtAZdyQPvsVMCGkLVdVHCVDBPVyeeoPtAgPhGDd"
+            ROLE_ID="454ff4c5-c595-4fb1-9d3e-a6d3c89674e5"/>
+
+    <T_USER ID="1895cd34-c5bc-46fb-b28c-ea47da9963a8"
+            USERNAME="Kate"
+            PASSWORD="mSmxxzxBNkymnEVszfVjSyZerSMTtxGCkvxUeHOkXecCrZxIeYISATrIisHC"
+            ROLE_ID="454ff4c5-c595-4fb1-9d3e-a6d3c89674e5"/>
+</dataset>

@@ -1,0 +1,15 @@
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: @datasource.user@
+    password: @datasource.password@
+    url: @datasource.url@?currentSchema=@datasource.schema@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate.ddl-auto: none
+    generate-ddl: false
+
+schema:
+  name: @datasource.schema@

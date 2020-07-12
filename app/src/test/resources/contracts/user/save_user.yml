@@ -1,0 +1,16 @@
+request:
+  method: POST
+  url: /user
+  headers:
+    Content-Type: application/json
+  body:
+    username: Nataly
+    password: password123
+response:
+  status: 201
+  headers:
+    Content-Type: application/json
+  body:
+    username: Nataly
+    password: null
+    role: user

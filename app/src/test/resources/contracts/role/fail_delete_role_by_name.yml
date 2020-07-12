@@ -1,0 +1,11 @@
+request:
+  method: DELETE
+  url: /role/moderator
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 400
+  body:
+    errors:
+      - source: null
+        details: Role not found.

@@ -1,0 +1,14 @@
+request:
+  method: GET
+  url: /role
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    - id: 65e65650-7065-11ea-bc55-0242ac130003
+      name: admin
+    - id: 4d1f13aa-7065-11ea-bc55-0242ac130003
+      name: user

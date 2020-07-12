@@ -1,0 +1,14 @@
+request:
+  method: POST
+  url: /role
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    name:
+response:
+  status: 400
+  body:
+    errors:
+      - source: name
+        details: Must not be blank.

@@ -1,0 +1,14 @@
+request:
+  method: POST
+  url: /role
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    name: moderator
+response:
+  status: 201
+  headers:
+    Content-Type: application/json
+  body:
+    name: moderator

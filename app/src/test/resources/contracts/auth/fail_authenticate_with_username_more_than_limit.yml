@@ -1,0 +1,14 @@
+request:
+  method: POST
+  url: /auth
+  headers:
+    Content-Type: application/json
+  body:
+    username: 1hxqvsk6cmcu8str8pawoj4zso
+    password: password
+response:
+  status: 400
+  body:
+    errors:
+      - source: username
+        details: Size must be between 3 and 20.

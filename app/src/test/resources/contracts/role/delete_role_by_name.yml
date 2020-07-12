@@ -1,0 +1,7 @@
+request:
+  method: DELETE
+  url: /role/user
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 202

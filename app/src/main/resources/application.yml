@@ -1,0 +1,27 @@
+server:
+  port: 7070
+  servlet:
+    context-path: /experimental/api
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: @datasource.user@
+    password: @datasource.password@
+    url: @datasource.url@?currentSchema=@datasource.schema@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate.ddl-auto: none
+
+logging:
+  level:
+    com.thekuzea.experimental: info
+
+security:
+  settings:
+    default-role: user
+    jwt:
+      validity: 2
+      secret: secretWord

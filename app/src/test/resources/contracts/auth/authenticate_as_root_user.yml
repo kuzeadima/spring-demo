@@ -1,0 +1,14 @@
+request:
+  method: POST
+  url: /auth
+  headers:
+    Content-Type: application/json
+  body:
+    username: root
+    password: password123
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    token: dG9rZW4=

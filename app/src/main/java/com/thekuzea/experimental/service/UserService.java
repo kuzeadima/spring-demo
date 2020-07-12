@@ -1,19 +1,18 @@
 package com.thekuzea.experimental.service;
 
-import com.thekuzea.experimental.domain.dto.UserResource;
-import com.thekuzea.experimental.exception.UserNotFoundException;
-
 import java.util.List;
+
+import com.thekuzea.experimental.domain.dto.UserDto;
 
 public interface UserService {
 
-    List<UserResource> getAllUsers();
+    List<UserDto> getAllUsers();
 
-    UserResource getByUsername(String username) throws UserNotFoundException;
+    UserDto getByUsername(String username);
 
-    UserResource addNewUser(UserResource userResource);
+    UserDto addNewUser(UserDto userDto);
 
-    UserResource updateByUserId(String userId, UserResource userResource) throws UserNotFoundException;
+    UserDto updateByUserId(String userId, UserDto userDto);
 
-    UserResource deleteByUsername(String username) throws UserNotFoundException;
+    void deleteByUsername(String username);
 }

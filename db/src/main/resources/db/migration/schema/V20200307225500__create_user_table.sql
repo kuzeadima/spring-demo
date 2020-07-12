@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS t_user (
-    id VARCHAR(36) PRIMARY KEY,
-    username VARCHAR(20) UNIQUE NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    role_id VARCHAR(36)
-);

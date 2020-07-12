@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS t_user (
+    id VARCHAR(36) PRIMARY KEY,
+    username VARCHAR(20) UNIQUE NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    role_id VARCHAR(36)
+);
+
+CREATE TABLE IF NOT EXISTS t_role (
+    id VARCHAR(36) PRIMARY KEY,
+    name VARCHAR(10) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS t_publication (
+    id VARCHAR(36) PRIMARY KEY,
+    published_by VARCHAR(36),
+    topic VARCHAR(80) UNIQUE NOT NULL,
+    body TEXT NOT NULL,
+    publication_time TIMESTAMP WITH TIME ZONE NOT NULL
+);

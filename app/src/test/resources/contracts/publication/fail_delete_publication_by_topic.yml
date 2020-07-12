@@ -1,0 +1,11 @@
+request:
+  method: DELETE
+  url: /publication/Collinsia heterophylla
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 400
+  body:
+    errors:
+      - source: null
+        details: Publication not found by provided topic.

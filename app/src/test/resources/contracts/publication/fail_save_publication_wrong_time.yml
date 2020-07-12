@@ -1,0 +1,16 @@
+request:
+  method: POST
+  url: /publication
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    publicationTime: '2020-AA-13T03:41:16.298+02:00'
+    topic: Achillea alpina L.
+    body: In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+response:
+  status: 400
+  body:
+    errors:
+      - source: publicationTime
+        details: Wrong date provided.

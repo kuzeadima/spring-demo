@@ -1,0 +1,14 @@
+request:
+  method: PUT
+  url: /user/e158aaa4-7065-11ea-bc55-0242ac130003
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    username: Charly
+response:
+  status: 400
+  body:
+    errors:
+      - source: null
+        details: User not found.

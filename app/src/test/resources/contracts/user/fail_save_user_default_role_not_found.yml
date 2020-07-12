@@ -1,0 +1,16 @@
+request:
+  method: POST
+  url: /user
+  headers:
+    Content-Type: application/json
+  body:
+    username: Julia
+    password: password123
+response:
+  status: 400
+  headers:
+    Content-Type: application/json
+  body:
+    errors:
+      - source: null
+        details: Default role not found.

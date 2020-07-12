@@ -1,86 +1,132 @@
 package com.thekuzea.experimental.util;
 
-import com.thekuzea.experimental.domain.model.User;
-import com.thekuzea.experimental.domain.dto.UserResource;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import static com.thekuzea.experimental.util.RoleTestDataGenerator.createRole;
-import static com.thekuzea.experimental.util.RoleTestDataGenerator.createRoleResource;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+import com.thekuzea.experimental.domain.dto.UserDto;
+import com.thekuzea.experimental.domain.model.User;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserTestDataGenerator {
 
     public static User createUser() {
         return User.builder()
-                .username("userN1")
-                .password("password1")
-                .build();
-    }
-
-    public static User createUserForMapper() {
-        return User.builder()
-                .id(UUID.fromString("00000001-0001-0001-0001-000000000001"))
-                .username("userN1")
-                .password("password1")
-                .role(createRole())
+                .id(UUID.fromString("762eb61a-7065-11ea-bc55-0242ac130003"))
+                .username("Larry")
+                .password("password123")
+                .role(RoleTestDataGenerator.createUserRole())
                 .build();
     }
 
     public static List<User> createUserList() {
         final User user1 = User.builder()
-                .username("userN1")
-                .password("password1")
+                .id(UUID.fromString("84db923c-7065-11ea-bc55-0242ac130003"))
+                .username("root")
+                .password("root")
+                .role(RoleTestDataGenerator.createAdminRole())
                 .build();
 
         final User user2 = User.builder()
-                .username("userN2")
-                .password("password2")
+                .id(UUID.fromString("762eb61a-7065-11ea-bc55-0242ac130003"))
+                .username("Larry")
+                .password("password123")
+                .role(RoleTestDataGenerator.createUserRole())
                 .build();
 
-        return Arrays.asList(user1, user2);
+        final User user3 = User.builder()
+                .id(UUID.fromString("afa06be6-7065-11ea-bc55-0242ac130003"))
+                .username("Kate")
+                .password("password456")
+                .role(RoleTestDataGenerator.createUserRole())
+                .build();
+
+        return Arrays.asList(user1, user2, user3);
     }
 
-    public static UserResource createUserResource() {
-        return UserResource.builder()
-                .id("00000001-0001-0001-0001-000000000001")
-                .username("userN1")
-                .role(createRoleResource().getName())
+    public static UserDto createUserResource() {
+        return UserDto.builder()
+                .id("762eb61a-7065-11ea-bc55-0242ac130003")
+                .username("Larry")
+                .role("user")
                 .build();
     }
 
-    public static UserResource createUserResourceForMapper() {
-        return UserResource.builder()
-                .id("00000001-0001-0001-0001-000000000001")
-                .username("userN1")
-                .password("password1")
+    public static UserDto createUserResourceForSave() {
+        return UserDto.builder()
+                .id("762eb61a-7065-11ea-bc55-0242ac130003")
+                .username("Larry")
+                .password("password123")
+                .role("user")
                 .build();
     }
 
-    public static List<UserResource> createUserResourceList() {
-        final UserResource user1 = UserResource.builder()
-                .id("00000001-0001-0001-0001-000000000001")
-                .username("userN1")
+    public static UserDto createUserResourceAsUpdateUserResponse() {
+        return UserDto.builder()
+                .id("afa06be6-7065-11ea-bc55-0242ac130003")
+                .username("Kate")
+                .role("user")
                 .build();
-
-        final UserResource user2 = UserResource.builder()
-                .id("00000002-0002-0002-0002-000000000002")
-                .username("userN2")
-                .build();
-
-        return Arrays.asList(user1, user2);
     }
 
-    public static UserResource createUserResourceWithErrorMessage(final String message) {
-        final List<String> validationMessage = new ArrayList<>();
-        validationMessage.add(message);
+    public static UserDto createUserResourceForMapper() {
+        return UserDto.builder()
+                .id("762eb61a-7065-11ea-bc55-0242ac130003")
+                .username("Larry")
+                .password("password123")
+                .build();
+    }
 
-        return UserResource.builder()
-                .id("00000001-0001-0001-0001-000000000001")
-                .username("userN1")
-                .validationMessages(validationMessage)
+    public static UserDto createUserResourceAsNewUser() {
+        return UserDto.builder()
+                .username("Nataly")
+                .password("password123")
+                .build();
+    }
+
+    public static UserDto createUserResourceAsNewUserResponse() {
+        return UserDto.builder()
+                .username("Nataly")
+                .role("user")
+                .build();
+    }
+
+    public static List<UserDto> createUserResourceList() {
+        final UserDto user1 = UserDto.builder()
+                .id("84db923c-7065-11ea-bc55-0242ac130003")
+                .username("root")
+                .role("admin")
+                .build();
+
+        final UserDto user2 = UserDto.builder()
+                .id("762eb61a-7065-11ea-bc55-0242ac130003")
+                .username("Larry")
+                .role("user")
+                .build();
+
+        final UserDto user3 = UserDto.builder()
+                .id("afa06be6-7065-11ea-bc55-0242ac130003")
+                .username("Kate")
+                .role("user")
+                .build();
+
+        return Arrays.asList(user1, user2, user3);
+    }
+
+    public static UserDto createUserResourceNegativeFlowUserAlreadyExists() {
+        return UserDto.builder()
+                .username("Larry")
+                .password("password123")
+                .build();
+    }
+
+    public static UserDto createUserResourceNegativeFlowDefaultRoleNotFound() {
+        return UserDto.builder()
+                .username("Julia")
+                .password("password123")
                 .build();
     }
 }

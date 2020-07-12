@@ -1,0 +1,14 @@
+request:
+  method: POST
+  url: /auth
+  headers:
+    Content-Type: application/json
+  body:
+    username: root
+    password: password
+response:
+  status: 400
+  body:
+    errors:
+      - source: null
+        details: Authentication failed. Invalid credentials provided.

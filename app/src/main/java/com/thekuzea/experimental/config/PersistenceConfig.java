@@ -1,5 +1,9 @@
 package com.thekuzea.experimental.config;
 
+import java.util.Properties;
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,17 +16,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.persistence.EntityManagerFactory;
-import javax.sql.DataSource;
-import java.util.Properties;
-
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(
-        basePackages = "com.thekuzea.experimental.domain.dao",
-        entityManagerFactoryRef = "entityManagerFactory",
-        transactionManagerRef = "transactionManager"
-)
+@EnableJpaRepositories(basePackages = "com.thekuzea.experimental.domain.dao")
 public class PersistenceConfig {
 
     @Bean
@@ -41,7 +37,7 @@ public class PersistenceConfig {
 
     @Bean
     public Properties hibernateProperties(@Value("${spring.jpa.database-platform}") final String dialect,
-                                           @Value("${spring.jpa.hibernate.ddl-auto}") final String ddl) {
+                                          @Value("${spring.jpa.hibernate.ddl-auto}") final String ddl) {
 
         final Properties properties = new Properties();
         properties.setProperty("hibernate.ddl-auto", ddl);

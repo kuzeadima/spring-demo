@@ -1,0 +1,11 @@
+request:
+  method: DELETE
+  url: /user/Alice
+  headers:
+    Authorization: Bearer dG9rZW4=
+response:
+  status: 400
+  body:
+    errors:
+      - source: null
+        details: User not found.

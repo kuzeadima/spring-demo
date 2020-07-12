@@ -1,0 +1,17 @@
+request:
+  method: POST
+  url: /user
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    username:
+    password:
+response:
+  status: 400
+  body:
+    errors:
+      - source: username
+        details: Must not be blank.
+      - source: password
+        details: Must not be blank.

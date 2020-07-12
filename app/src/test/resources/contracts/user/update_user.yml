@@ -1,0 +1,17 @@
+request:
+  method: PUT
+  url: /user/afa06be6-7065-11ea-bc55-0242ac130003
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    password: password456
+response:
+  status: 202
+  headers:
+    Content-Type: application/json
+  body:
+    id: afa06be6-7065-11ea-bc55-0242ac130003
+    username: Kate
+    password: null
+    role: user

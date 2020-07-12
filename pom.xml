@@ -15,10 +15,14 @@
 
     <groupId>com.thekuzea.experimental</groupId>
     <artifactId>experimental-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <datasource.user>postgres</datasource.user>
         <datasource.password>quattro</datasource.password>
         <datasource.schema>experimental_app</datasource.schema>

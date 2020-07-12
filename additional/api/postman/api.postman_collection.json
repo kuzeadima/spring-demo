@@ -1,0 +1,528 @@
+{
+  "info": {
+    "_postman_id": "5d43bf8f-ef5e-486b-9048-975646080e07",
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "generate random data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/generate-random-data/100",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "generate-random-data",
+            "100"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "authenticate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"root\",\n\t\"password\": \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/auth",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all users",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get specified user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/user/root",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "user",
+            "root"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "save user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"username\",\n\t\"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"username\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/user/1895cd34-c5bc-46fb-b28c-ea47da9963a8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "user",
+            "1895cd34-c5bc-46fb-b28c-ea47da9963a8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete specified user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/user/{{username}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "user",
+            "{{username}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all roles",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/role",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "role"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "save role",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"name\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/role",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "role"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete specified role",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/role/{{name}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "role",
+            "{{name}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all posts",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/publication",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "post"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all posts for current user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/publication/current-user-publications",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "post",
+            "current-user-posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "save post",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"publicationTime\": \"2020-04-26T11:48:54.758+02:00\",\n\t\"topic\": \"topic\",\n\t\"body\": \"body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/publication",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "post"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete specified post",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTg2MTAzMjYwLCJpYXQiOjE1ODYwOTYwNjB9.DI8xenR_Hp4F0qz539ERCREzzBMFxH9kK181OqmEwMSx7veFKrHQF9c6HGK_d1R7RjydFGIjks-gp9SdHvaFxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7070/experimental/api/publication/{{topic}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7070",
+          "path": [
+            "post",
+            "{{topic}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

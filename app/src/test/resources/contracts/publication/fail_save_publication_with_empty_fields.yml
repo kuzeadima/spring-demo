@@ -1,0 +1,20 @@
+request:
+  method: POST
+  url: /publication
+  headers:
+    Authorization: Bearer dG9rZW4=
+    Content-Type: application/json
+  body:
+    publicationTime:
+    topic:
+    body:
+response:
+  status: 400
+  body:
+    errors:
+      - source: publicationTime
+        details: Must not be blank.
+      - source: topic
+        details: Must not be blank.
+      - source: body
+        details: Must not be blank.

@@ -1,15 +1,14 @@
 package com.thekuzea.experimental.service;
 
-import com.thekuzea.experimental.domain.dto.RoleResource;
-import com.thekuzea.experimental.exception.RoleNotFoundException;
-
 import java.util.List;
+
+import com.thekuzea.experimental.domain.dto.RoleDto;
 
 public interface RoleService {
 
-    List<RoleResource> getAllRoles();
+    List<RoleDto> getAllRoles();
 
-    RoleResource addNewRole(RoleResource incomingResource);
+    RoleDto addNewRole(RoleDto incomingResource);
 
-    RoleResource deleteByName(String name) throws RoleNotFoundException;
+    void deleteByName(String name);
 }
